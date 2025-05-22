@@ -1,0 +1,325 @@
+/* Main Shop Page Styles - using unique class names */
+.shop-page-main {
+  width: 100%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Shop Content and Filters - renamed to avoid conflicts */
+.shop-sidebar {
+  width: 25%;
+  min-width: 250px;
+}
+
+/* Filter Section */
+.shop-filters-panel {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 20px;
+  transition: all 0.3s ease;
+}
+
+.shop-filters-panel h3 {
+  font-size: 20px;
+  color: #222;
+  margin-bottom: 24px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.shop-filters-panel h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 3px;
+  background-color: #5d5fef;
+  border-radius: 2px;
+}
+
+.shop-category-filter,
+.shop-price-filter {
+  margin-bottom: 28px;
+}
+
+.shop-category-filter label,
+.shop-price-filter label {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.shop-category-filter select {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23555' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  transition: all 0.2s ease;
+}
+
+.shop-category-filter select:focus {
+  border-color: #5d5fef;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(93, 95, 239, 0.15);
+}
+
+/* Price Range Slider */
+.shop-price-filter input[type="range"] {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  background: linear-gradient(to right, #5d5fef, #7879f1);
+  border-radius: 10px;
+  outline: none;
+  margin: 15px 0;
+}
+
+.shop-price-filter input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 2px solid #5d5fef;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(93, 95, 239, 0.3);
+}
+
+.shop-price-range {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Products Grid - renamed to avoid conflicts */
+.shop-products-grid {
+  flex: 1;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Product Card - renamed to avoid conflicts */
+.shop-product-item {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  padding-bottom: 15px;
+}
+
+.shop-product-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.shop-product-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.shop-product-item h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  margin: 15px 15px 10px;
+  line-height: 1.4;
+}
+
+.shop-product-item .shop-product-price {
+  font-size: 18px;
+  color: #5d5fef;
+  font-weight: 700;
+  margin: 0 15px 10px;
+}
+
+.shop-product-item .shop-product-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0 15px 15px;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.shop-product-item .shop-view-btn {
+  margin: 0 15px;
+  padding: 10px 16px;
+  background-color: #5d5fef;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(93, 95, 239, 0.2);
+}
+
+.shop-product-item .shop-view-btn:hover {
+  background-color: #4a4cda;
+  box-shadow: 0 6px 12px rgba(93, 95, 239, 0.3);
+}
+
+/* No products message */
+.shop-products-grid .shop-no-products {
+  font-size: 16px;
+  padding: 20px;
+  background: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  color: #666;
+  grid-column: 1 / -1;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .shop-page-main {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-page-main {
+    flex-direction: column;
+  }
+
+  .shop-sidebar {
+    width: 100%;
+  }
+
+  .shop-filters-panel {
+    position: static;
+    margin-bottom: 20px;
+  }
+
+  .shop-products-grid {
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .shop-products-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .shop-product-item img {
+    height: 180px;
+  }
+}
+
+.shop-add-cart-btn {
+  background-color: #1e90ff;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  margin: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.shop-add-cart-btn:hover {
+  background-color: #0d6efd;
+}
+
+.shop-modal-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Модальное окно */
+.shop-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-modal-content {
+  background: var(--form-background-light);
+  color: var(--text-color-light);
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.shop-modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.shop-modal-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.shop-modal-price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.shop-add-cart-btn {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #222;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-add-cart-btn:hover {
+  background-color: #444;
+}

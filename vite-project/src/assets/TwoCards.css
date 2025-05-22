@@ -1,0 +1,63 @@
+.card {
+    position: relative;
+    width: 634px;
+    height: 255px;
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    color: white;
+    margin-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  .cards-wrapper {
+    display: flex;
+    gap: 40px; 
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-40px);
+  }
+  
+  
+  .card-content {
+    z-index: 2;
+  }
+  
+  .discount {
+    font-size: 16px;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .shop-button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .shop-button:hover {
+    background-color: #e6b800;
+  }
+  
+  .card-image {
+    position: absolute;
+    right: 20px;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover .card-image {
+    transform: scale(1.1);
+  }
+  

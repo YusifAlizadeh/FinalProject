@@ -1,0 +1,197 @@
+ 
+.containerx {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 46px;
+    gap: 20px;
+}
+
+  .left-panel {
+    background: linear-gradient(to bottom, #5a0000, #000);
+    color: white;
+    padding: 50px;
+    border-radius: 12px;
+    text-align: center;
+    width: 340px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .jewel-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .jewel-image {
+    width: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .view-btn {
+    background: white;
+    color: black;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .right-panel {
+    flex-grow: 1;
+  }
+  
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .product {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .product p {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 8px;
+    font-size: 16px;
+  }
+  
+  [data-theme="dark"] .product {
+    background-color: #111;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+  }
+  
+  [data-theme="dark"] p{
+    color:#fff;
+  }
+  
+  [data-theme="dark"] .old-price {
+    color: #bbb;
+  }
+  
+  [data-theme="dark"] .view-btn {
+    background-color: #fff;
+    color: #000;
+  }
+  [data-theme="dark"] .view-btn:hover {
+    background-color: #ccc;
+  }
+  
+
+  /* Jewel Component Responsive Styles */
+
+@media (max-width: 1200px) {
+  .containerx {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .containerx {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 30px;
+  }
+
+  .jewel-image {
+    max-width: 300px;
+  }
+
+  .right-panel {
+    width: 100%;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .left-panel h2 {
+    font-size: 24px;
+  }
+
+  .view-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .product p {
+    font-size: 14px;
+  }
+
+  .price,
+  .old-price {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .containerx {
+    padding: 30px 15px;
+  }
+
+  .left-panel {
+    padding: 20px;
+  }
+
+  .jewel-image {
+    max-width: 200px;
+  }
+
+  .left-panel h2 {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .product img {
+    max-height: 120px;
+  }
+}

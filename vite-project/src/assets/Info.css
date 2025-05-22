@@ -1,0 +1,314 @@
+.banner-container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .brands {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand {
+    font-size: 18px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #ffcc00;
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  .banner-text {
+    text-align: left;
+    color: #000;
+  }
+  
+  .banner-text h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  .banner-text p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .shop-now {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .banner-image img {
+    width: 100%;
+  }
+  
+  /* Контейнер */
+.banner-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .brands {
+    width: 97%;
+    display: flex;
+    justify-content: space-around;
+    background: white;
+    padding: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brands img {
+    height: 60px;
+  }
+  
+  .drone-banner {
+    width: 93%;
+    display: flex;
+    align-items: center;
+    background: #FFD500;
+    border-radius: 15px;
+    padding: 30px;
+    justify-content: space-between;
+  }
+  
+  .banner-content h2 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .banner-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .shop-button {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .shop-button:hover {
+    background: #333;
+  }
+  
+  .drone-image {
+    width: 90%;
+  }
+  
+  .products-banner-wrapper {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  
+  .banner-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f6f8fa;
+    padding: 30px;
+    border-radius: 16px;
+    position: relative;
+    width: 600px;
+    min-height: 250px;
+    overflow: hidden;
+  }
+  
+  .banner-img {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 260px;
+  }
+  
+  .banner-info {
+    text-align: left;
+    margin-left: 200px;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+  }
+  
+  .banner-category {
+    color: gray;
+    font-size: 14px;
+  }
+  
+  .banner-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #222;
+    line-height: 1.2;
+  }
+  
+  .banner-button {
+    background: #d50000;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: 0.3s;
+  }
+  
+  .banner-button:hover {
+    background: #a00000;
+  }
+  
+  /* Info Component Responsive Styles */
+
+@media (max-width: 1200px) {
+  .banner-container {
+    padding: 40px 20px;
+  }
+
+  .brands {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .brands {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .brands img {
+    max-width: 100px;
+  }
+
+  .drone-banner {
+    padding: 30px;
+  }
+
+  .banner-content h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .drone-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 25px;
+  }
+
+  .drone-image {
+    max-width: 70%;
+    margin-top: 20px;
+  }
+
+  .banner-content h2 {
+    font-size: 24px;
+  }
+
+  .products-banner-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .banner-item {
+    width: 100%;
+  }
+
+  .banner-img {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-container {
+    padding: 30px 15px;
+  }
+
+  .brands img {
+    max-width: 80px;
+  }
+
+  .drone-banner {
+    padding: 20px;
+  }
+
+  .drone-image {
+    max-width: 80%;
+  }
+
+  .banner-content h2 {
+    font-size: 22px;
+  }
+
+  .banner-content p {
+    font-size: 14px;
+  }
+
+  .shop-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .banner-item {
+    padding: 15px;
+  }
+
+  .banner-title {
+    font-size: 16px;
+  }
+
+  .banner-category {
+    font-size: 13px;
+  }
+
+  .banner-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+  .brands img {
+    max-width: 70px;
+  }
+
+  .drone-banner {
+    padding: 15px;
+  }
+
+  .banner-content h2 {
+    font-size: 20px;
+  }
+
+  .banner-item {
+    padding: 12px;
+  }
+}

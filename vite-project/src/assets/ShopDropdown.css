@@ -1,0 +1,47 @@
+.shop-dropdown {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  left: 389px;
+  width: 800px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.shop-column {
+  flex: 1;
+  padding: 10px;
+}
+
+.shop-column h4 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.shop-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.shop-column ul li {
+  font-size: 14px;
+  color: gray;
+  padding: 5px 0;
+  position: relative;
+}
+
+.shop-column ul li .tag {
+  font-size: 10px;
+  color: white;
+  padding: 3px 6px;
+  border-radius: 3px;
+  margin-left: 5px;
+}
+
+.tag.new { background: red; }
+.tag.hot { background: green; }
+.tag.sale { background: blue; }
+.tag.best { background: orange; }

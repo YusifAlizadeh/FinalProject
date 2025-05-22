@@ -1,0 +1,385 @@
+/* Layout */
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.sidebar {
+  width: 23%;
+}
+
+.slider-wrapper {
+  width: 75%;
+  display: flex;
+  gap: 20px;
+}
+
+/* Theme Variables */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --secondary-text: #777;
+  --card-background: white;
+  --card-border: #ddd;
+  --footer-background: #f1f1f1;
+  --footer-border: #ddd;
+  --navbar-background: #ffffff;
+  --button-primary: #d4121a;
+  --button-primary-hover: #a50f15;
+  --banner-shadow: rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] {
+  --background-color: #121212;
+  --text-color: #ffffff;
+  --secondary-text: #bbb;
+  --card-background: #333;
+  --card-border: #444;
+  --footer-background: #222;
+  --footer-border: #444;
+  --navbar-background: #121212;
+  --button-primary: #ff4d4d;
+  --button-primary-hover: #d41f1f;
+  --banner-shadow: rgba(255, 255, 255, 0.2);
+}
+
+/* Base Theme Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--navbar-background);
+  color: var(--text-color);
+}
+
+.navbar .theme-btn {
+  background-color: transparent;
+  color: inherit;
+}
+
+.navbar .top-bar,
+.navbar .main-bar {
+  background-color: inherit;
+  color: inherit;
+}
+
+/* Bottom Bar */
+.bottom-bar {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+/* Product Cards */
+.product-card {
+  background-color: var(--card-background);
+  color: var(--text-color);
+  border: 1px solid var(--card-border);
+}
+
+.product-card .product-title {
+  font-size: 18px;
+  font-weight: bold;
+  color: inherit;
+}
+
+.product-card .product-description {
+  font-size: 14px;
+  color: inherit;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--footer-background);
+  color: var(--text-color);
+  border-top: 1px solid var(--footer-border);
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Navigation Links */
+.nav-item a,
+.link-style,
+.faq,
+.auth {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover,
+.link-style:hover,
+.faq:hover,
+.auth:hover {
+  color: var(--button-primary);
+}
+
+/* Brand Images */
+[data-theme="dark"] .brands img {
+  filter: brightness(0.8);
+}
+
+/* Buttons */
+.shop-button,
+.banner-button,
+.cta-button {
+  background-color: var(--button-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-button:hover,
+.banner-button:hover,
+.cta-button:hover {
+  background-color: var(--button-primary-hover);
+}
+
+/* Banner Items */
+.banner-item {
+  background-color: var(--card-background);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banner-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px var(--banner-shadow);
+}
+
+.banner-category {
+  color: var(--secondary-text);
+}
+
+.banner-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* Travel Pack Component */
+.travel-pack {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+.image-section {
+  position: relative;
+  width: 60%;
+}
+
+.background-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.hotspots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hotspot {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.hotspot:hover {
+  transform: scale(1.2);
+}
+
+.text-section {
+  width: 35%;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-main h5 {
+  font-size: 18px;
+  color: var(--secondary-text);
+}
+
+.text-main h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 15px 0;
+  color: var(--text-color);
+}
+
+.text-main p {
+  font-size: 16px;
+  color: var(--secondary-text);
+}
+
+/* Wishlist Button */
+.wishlist-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  background-color: var(--card-background);
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.wishlist-link:hover {
+  background-color: var(--card-border);
+}
+
+.wishlist-icon {
+  font-size: 18px;
+  color: inherit;
+}
+
+:root {
+  --background-color-light: #f4f7fb;
+  --form-background-light: #fff;
+  --text-color-light: #333;
+  --input-background-light: #f9f9f9;
+  --input-border-light: #ccc;
+  --button-background-light: #ff5c8d;
+  --button-background-hover-light: #e14b79;
+  --error-color-light: #f44336;
+  --success-color-light: #4caf50;
+}
+
+[data-theme='dark'] {
+  --background-color-light: #121212;
+  --form-background-light: #1f1f1f;
+  --text-color-light: #fff;
+  --input-background-light: #333;
+  --input-border-light: #444;
+  --button-background-light: #ff5c8d;
+  --button-background-hover-light: #e14b79;
+  --error-color-light: #e57373;
+  --success-color-light: #81c784;
+}
+
+.register-container {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-form {
+  background-color: var(--form-background-light);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+h1.register-title, .section-title {
+  color: var(--text-color-light);
+}
+
+.login-error {
+  color: var(--error-color-light);
+  background-color: #fdd;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-success {
+  color: var(--success-color-light);
+  background-color: #d4f8d4;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  background-color: var(--input-background-light);
+  border: 1px solid var(--input-border-light);
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  color: var(--text-color-light);
+}
+
+.continue-btn {
+  background-color: var(--button-background-light);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+  background-color: var(--button-background-hover-light);
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+a {
+  color: var(--button-background-light);
+}
+
+a:hover {
+  color: var(--button-background-hover-light);
+}
+
+
+.dark-mode .diff,
+.dark-mode .diff a,
+.dark-mode .diff span,
+.dark-mode .user-display {
+  color: white;
+}
+
+.dark-mode .logout-btn svg,
+.dark-mode .wishlist svg,
+.dark-mode .compare svg {
+  color: white;
+}
+
+.logout-btn {
+  background-color: #fff;
+}
+
+.dark-mode .logout-btn {
+  background-color: #121212;
+}

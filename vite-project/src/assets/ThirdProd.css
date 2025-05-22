@@ -1,0 +1,234 @@
+.third-prod-container {
+    text-align: left;
+    padding: 20px;
+    margin-top: 25px;
+    margin-bottom: 80px;
+  }
+  
+  .third-prod-container h2 {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 400;
+  }
+  
+  .third-prod-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .products {
+    display: flex;
+    gap: 48px;
+  }
+  
+  .product-card {
+    position: relative;
+    width: 280px;
+    background: #f8f8f8;
+    border-radius: 10px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    transform: translateX(20px);
+  }
+  
+  
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transform: translateY(30px);
+  }
+  
+  .product-overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    opacity: 0;
+  }
+  
+
+  
+  .product-overlay button {
+    background: white;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+
+  
+  .product-title {
+    position: relative;
+    top: 100px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  .product-price {
+    position: relative;
+    top: 100px;
+    color: red;
+    font-size: 14px;
+  }
+  
+
+
+.arrows {
+  color: #444;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  transition: opacity 0.3s ease;
+}
+
+.arrows.left {
+  left: -30px;
+}
+
+.arrows.right {
+  right: -30px;
+}
+
+
+/* ThirdProd Responsive Styles */
+
+@media (max-width: 1200px) {
+  .third-prod-container {
+    padding: 40px 20px;
+  }
+
+  .third-prod-container .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .third-prod-container .section-title {
+    font-size: 28px;
+  }
+
+  .third-prod-container .section-subtitle {
+    font-size: 16px;
+  }
+
+  .third-prod-container .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Medium Tablets */
+@media (max-width: 768px) {
+  .third-prod-container .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .third-prod-container .product-card {
+    padding: 15px;
+  }
+
+  .third-prod-container .product-name {
+    font-size: 16px;
+  }
+
+  .third-prod-container .product-description {
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+  }
+
+  .third-prod-container .hover-menu {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: row;
+    width: auto;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 576px) {
+  .third-prod-container {
+    padding: 30px 15px;
+  }
+
+  .third-prod-container .section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .third-prod-container .products-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .third-prod-container .product-card {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .third-prod-container .product-image {
+    height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .third-prod-container {
+    padding: 30px 15px;
+  }
+
+  .third-prod-container .section-title {
+    font-size: 24px;
+  }
+
+  .third-prod-container .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .third-prod-container .product-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 375px) {
+  .third-prod-container .product-card {
+    padding: 10px;
+  }
+
+  .third-prod-container .product-name {
+    font-size: 15px;
+  }
+
+  .third-prod-container .new-price,
+  .third-prod-container .old-price {
+    font-size: 14px;
+  }
+
+  .third-prod-container .menu-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
